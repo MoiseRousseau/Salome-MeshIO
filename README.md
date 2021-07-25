@@ -14,9 +14,15 @@ Salome study and software input file to create example.
 
 Create simple example.
 
+## Tests
+
+* Tetra, pyramid, penta and hexahedron exported through MeshIO in MED and successfully reimported in Salome with built-in importation or through MeshIO.
+* Export in VTU and visualization in Paraview
+
 ## TODO
 
-check problem exporting MED and reimporting through Salome. Volume is negative.
-Add group
-PR meshio for medit file format (normals, tangents, ...)
-Add read function
+Consider group ? Add group through cell_set ?
+Test face
+Test quadratic element
+Add line
+
