@@ -17,7 +17,7 @@ sudo apt install git
 git clone https://github.com/MoiseRousseau/Salome-MeshIO.git SALOMExMeshIO
 ```
 
-2. Open `smesh_plugin.py` and add it at the end the two following lines:
+2. Open `smesh_plugin.py` file in the folder `$HOME/.config/salome/Plugins/` and add it the two following lines at the end:
 ```
 import SALOMExMeshIO
 SALOMExMeshIO.init(salome_pluginsmanager)
