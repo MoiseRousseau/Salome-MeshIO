@@ -22,6 +22,7 @@ import salome
 import SMESH
 from salome.smesh import smeshBuilder
 from qtsalome import QFileDialog, QMessageBox
+from salome.gui import helper
 
 import meshio
 from SALOMExMeshIO.common import ext_to_mesh_format
@@ -41,8 +42,8 @@ def gui_output_file(out_format):
   return f_out
 
 def get_input_mesh():
-  objId = salome.sg.getSelected(0)
-  if objId is None:
+  selectedMesh = helper.getSObjectSelected()[0].GetObject()
+  if selectedMesh is None:
     print("No mesh selected")
     info = QMessageBox()
     info.setText("No mesh selected!")
@@ -51,7 +52,6 @@ def get_input_mesh():
     info.setWindowTitle("Salome-MeshIO")
     info.exec_()
     return None
-  selectedMesh = salome.IDToObject(objId)
   mesh = selectedMesh.GetMesh()
   return mesh
   

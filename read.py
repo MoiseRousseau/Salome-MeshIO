@@ -54,7 +54,7 @@ def meshio_read(context):
   #mesh.SetName(name)
   print("Add vertices")
   for (X,Y,Z) in src_mesh.points:
-    mesh.AddNode(X,Y,Z)
+    mesh.AddNode(float(X),float(Y),float(Z))
   print("Add cells")
   for cell_type, cells in src_mesh.cells:
     if cell_type in ["triangle", "triangle6", "triangle7", "quad", "quad8", "quad9"]:
