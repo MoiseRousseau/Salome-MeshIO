@@ -18,7 +18,6 @@
 
 from SALOMExMeshIO import read
 from SALOMExMeshIO import export
-import importlib
 
 def add_functions_to_salome(salome_pluginsmanager):
   #read function
